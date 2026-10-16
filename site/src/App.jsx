@@ -8,6 +8,7 @@ const primaryNav = [
   { label: "Programs", href: "/programs/" },
   { label: "Resources", href: "/resources/" },
   { label: "Get involved", href: "/get-involved/" },
+  { label: "Sponsor", href: "/sponsor/" },
   { label: "Contact", href: "/contact/" },
 ];
 const exploreLinks = [
@@ -15,6 +16,7 @@ const exploreLinks = [
   ["Programs", "/programs/"],
   ["Resources", "/resources/"],
   ["Get involved", "/get-involved/"],
+  ["Sponsor Navio", "/sponsor/"],
   ["Contact", "/contact/"],
 ];
 const policyLinks = [
