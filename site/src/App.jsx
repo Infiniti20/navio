@@ -8,6 +8,7 @@ const primaryNav = [
   { label: "Programs", href: "/programs/" },
   { label: "Resources", href: "/resources/" },
   { label: "Get involved", href: "/get-involved/" },
+  { label: "Sponsor", href: "/sponsor/" },
   { label: "Contact", href: "/contact/" },
 ];
 const exploreLinks = [
@@ -15,6 +16,7 @@ const exploreLinks = [
   ["Programs", "/programs/"],
   ["Resources", "/resources/"],
   ["Get involved", "/get-involved/"],
+  ["Sponsor Navio", "/sponsor/"],
   ["Contact", "/contact/"],
 ];
 const policyLinks = [
@@ -283,6 +285,7 @@ function VolunteerHoursPage() {
 }
 
 export function App({ path = "/" }) {
+  console.log("App path:", path);
   const normalizedPath = normalizePath(path);
   const page = getPage(normalizedPath);
   if (normalizedPath === "/links/") return <LinkPage />;

@@ -1,17 +1,30 @@
 const email = "hello@naviopathways.com";
 const instagram = "https://www.instagram.com/naviopathways/";
 
-const breadcrumb = (label) => `<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">${label}</span></li></ol></nav>`;
+const breadcrumb = (label) =>
+  `<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">${label}</span></li></ol></nav>`;
 
-const internalHero = (eyebrow, title, description, actions = "", variant = "default") => `<section class="page-hero page-hero-${variant}"><div class="page-hero-atmosphere" aria-hidden="true"><i></i><b></b></div><div class="container page-hero-layout"><div class="page-hero-index" aria-hidden="true"><span>NAVIO</span><i></i><span>ONTARIO</span></div><div class="page-hero-copy"><p class="eyebrow">${eyebrow}</p><h1>${title}</h1><p class="lead">${description}</p>${actions}</div><div class="page-hero-mark" aria-hidden="true"><span>✦</span></div></div></section>`;
+const internalHero = (
+  eyebrow,
+  title,
+  description,
+  actions = "",
+  variant = "default",
+) =>
+  `<section class="page-hero page-hero-${variant}"><div class="page-hero-atmosphere" aria-hidden="true"><i></i><b></b></div><div class="container page-hero-layout"><div class="page-hero-index" aria-hidden="true"><span>NAVIO</span><i></i><span>ONTARIO</span></div><div class="page-hero-copy"><p class="eyebrow">${eyebrow}</p><h1>${title}</h1><p class="lead">${description}</p>${actions}</div><div class="page-hero-mark" aria-hidden="true"><span>✦</span></div></div></section>`;
 
-const contactCta = (title = "Start a conversation with Navio.", subject = "Navio Pathways inquiry") => `<section class="contact-cta"><div class="contact-cta-orbit" aria-hidden="true"></div><div class="container contact-cta-grid"><div><p class="eyebrow">A direct route</p><h2>${title}</h2><p>Tell us what you are interested in and what a useful response would help you do next.</p></div><div class="button-row"><a class="button button-light" href="mailto:${email}?subject=${encodeURIComponent(subject)}">Email Navio <span aria-hidden="true">↗</span></a><a class="button button-quiet-light" href="/contact/">Choose a contact route</a></div></div></section>`;
+const contactCta = (
+  title = "Start a conversation with Navio.",
+  subject = "Navio Pathways inquiry",
+) =>
+  `<section class="contact-cta"><div class="contact-cta-orbit" aria-hidden="true"></div><div class="container contact-cta-grid"><div><p class="eyebrow">A direct route</p><h2>${title}</h2><p>Tell us what you are interested in and what a useful response would help you do next.</p></div><div class="button-row"><a class="button button-light" href="mailto:${email}?subject=${encodeURIComponent(subject)}">Email Navio <span aria-hidden="true">↗</span></a><a class="button button-quiet-light" href="/contact/">Choose a contact route</a></div></div></section>`;
 
 export const pageContent = {
   "/": {
     path: "/",
     title: "Navio Pathways | Career exploration for Ontario students",
-    description: "Navio Pathways is an Ontario incorporated not-for-profit helping high school students explore careers, opportunities, experiences, and informed next steps.",
+    description:
+      "Navio Pathways is an Ontario incorporated not-for-profit helping high school students explore careers, opportunities, experiences, and informed next steps.",
     noindex: false,
     html: `<section class="hero navio-hero"><div class="hero-mesh" aria-hidden="true"></div><div class="hero-aurora" aria-hidden="true"></div><div class="container hero-shell"><div class="hero-kicker"><span>Ontario incorporated not-for-profit</span><span>Career exposure // experience // guidance</span></div><div class="hero-layout"><div class="hero-copy"><p class="eyebrow hero-eyebrow"><span></span> Navio Pathways</p><h1><span data-letter-reveal>Futures aren’t</span><strong data-letter-reveal>a straight line.</strong></h1><p class="lead">Navio Pathways helps high school students navigate what comes next by connecting them with careers, opportunities, experiences, and people who can support informed decisions about their future.</p><div class="button-row"><a class="button button-primary" href="/programs/">Explore our programs <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="/about/">Why Navio exists</a></div><p class="hero-note">Programs<span aria-hidden="true"></span>Resources<span aria-hidden="true"></span>Community</p></div><div class="case-visual pathway-visual" aria-label="Navio Pathways connects exploration, experience, contribution, and direction"><div class="case-orbit orbit-one" aria-hidden="true"></div><div class="case-orbit orbit-two" aria-hidden="true"></div><div class="pathway-map"><div class="pathway-map-top"><span>PATHWAY SEQUENCE // ONT</span><b><i aria-hidden="true"></i> ACTIVE</b></div><div class="pathway-map-body"><p class="pathway-prompt">Direction builds one useful step at a time.</p><ol class="pathway-stages"><li><span>01</span><div><small>Explore</small><strong>See more options</strong></div></li><li><span>02</span><div><small>Experience</small><strong>Test an interest</strong></div></li><li><span>03</span><div><small>Connect</small><strong>Learn from people</strong></div></li><li><span>04</span><div><small>Direction</small><strong>Choose a next step</strong></div></li></ol></div><div class="pathway-map-bottom"><span aria-hidden="true"></span><p>More context. Less guesswork.</p></div></div></div></div><ol class="mission-route" aria-label="How Navio supports high school students"><li><span>Explore</span><strong>Understand more possibilities</strong><small>Learn what different paths involve before choosing one.</small></li><li><span>Experience</span><strong>Test an interest in practice</strong><small>Use programs and events to ask questions, participate, and reflect.</small></li><li><span>Connect</span><strong>Learn from other people</strong><small>Hear from students, educators, professionals, and organizations.</small></li></ol></div></section>
     <section class="identity-strip" aria-label="Organization facts"><div class="container identity-strip-grid"><p><span>Organization</span>Navio Pathways</p><p><span>Status</span>Ontario incorporated not-for-profit</p><p><span>Service area</span>Ontario, Canada</p><p><span>Corporation</span>1001662092</p></div></section>
@@ -25,7 +38,8 @@ export const pageContent = {
   "/about/": {
     path: "/about/",
     title: "About Navio Pathways | Career exploration for students",
-    description: "Learn why Navio Pathways helps Ontario high school students explore careers, opportunities, experiences, and informed next steps.",
+    description:
+      "Learn why Navio Pathways helps Ontario high school students explore careers, opportunities, experiences, and informed next steps.",
     noindex: false,
     html: `${breadcrumb("About")}${internalHero("About Navio", "More context before the next decision.", "Navio Pathways helps high school students explore careers, opportunities, experiences, and people before choosing what comes next.", "", "about")}
     <section class="section about-mission"><div class="container story-grid"><div class="story-aside"><span>Our mission</span><i aria-hidden="true"></i></div><div class="story-copy"><h2>Help high school students navigate what comes next.</h2><p>Students in Grades 9 - 12 make course, post-secondary, and career decisions while they are still learning what different paths involve. Navio gives them more opportunities to explore before making those choices.</p><p>Our mission is to expose students to careers, opportunities, experiences, and people who can help them make informed decisions about their future. We do this through clear programs, useful resources, and direct community participation.</p></div></div></section>
@@ -38,7 +52,8 @@ export const pageContent = {
   "/programs/": {
     path: "/programs/",
     title: "Navio NEXT conference | Youth business career exploration",
-    description: "Explore Navio NEXT, Navio Pathways’ free annual in-person business career conference for Ontario secondary students on November 28, 2026 in Mississauga.",
+    description:
+      "Explore Navio NEXT, Navio Pathways’ free annual in-person business career conference for Ontario secondary students on November 28, 2026 in Mississauga.",
     noindex: false,
     html: `${breadcrumb("Programs")}<section class="program-hero"><div class="program-hero-glow" aria-hidden="true"></div><div class="container program-hero-layout"><div class="program-hero-copy"><p class="eyebrow">Navio programs</p><h1>Meet people closer to the path.</h1><p class="lead">Navio programs turn career exploration into direct experience. Our annual conference brings Ontario secondary students into conversation with people studying, teaching, and working across business.</p><div class="button-row"><a class="button button-primary" href="#next">Explore Navio NEXT <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="/get-involved/">Get involved</a></div></div><div class="program-lockup" aria-label="Navio NEXT is Navio Pathways' annual conference and takes place November 28, 2026"><span class="program-type-label">Annual conference</span><div class="program-lockup-code"><span>N</span><span>E</span><span>X</span><span>T</span></div><div class="program-lockup-date"><small>Mississauga, Ontario</small><time datetime="2026-11-28">28 / 11 / 26</time></div><span class="program-lockup-tagline">Connect. Ask. Explore.</span></div></div></section>
     <section class="program-status"><div class="container program-status-grid"><p><span class="status-dot" aria-hidden="true"></span><strong>Annual conference // Navio NEXT</strong></p><p><time datetime="2026-11-28">November 28, 2026</time></p><a href="mailto:${email}?subject=Navio%20NEXT%202026%20updates">Request conference updates <span aria-hidden="true">→</span></a></div></section>
@@ -53,7 +68,8 @@ export const pageContent = {
   "/get-involved/": {
     path: "/get-involved/",
     title: "Get involved with Navio Pathways",
-    description: "Take part in Navio Pathways through student programs, organization involvement, professional perspectives, schools, community collaboration, or program support.",
+    description:
+      "Take part in Navio Pathways through student programs, organization involvement, professional perspectives, schools, community collaboration, or program support.",
     noindex: false,
     html: `${breadcrumb("Get involved")}${internalHero("Get involved", "Bring your interests, experience, or community perspective.", "Young people, professionals, educators, organizations, and supporters can each strengthen a different part of Navio Pathways.", "", "involved")}
     <section class="section involvement-section"><div class="container"><div class="section-heading heading-with-note"><div><p class="eyebrow">Three clear routes</p><h2>Participate. Build. Connect.</h2></div><p>Choose the route that matches what you want to do. Each link opens a direct, monitored email with the right subject.</p></div><div class="involvement-paths"><a class="involvement-card path-compete" href="mailto:${email}?subject=Navio%20student%20program%20interest"><span class="path-icon" aria-hidden="true">↗</span><p class="eyebrow">For students</p><h3>Take part in a program</h3><p>Tell us what you want to explore, which practical skills you want to build, or ask about current program updates.</p><strong>Ask about programs</strong></a><a class="involvement-card path-contribute" href="mailto:${email}?subject=Navio%20organization%20involvement"><span class="path-icon" aria-hidden="true">✦</span><p class="eyebrow">For contributors</p><h3>Help build the organization</h3><p>Share your experience and interest in operations, outreach, communications, program development, or student-focused resources.</p><strong>Discuss organization involvement</strong></a><a class="involvement-card path-support" href="mailto:${email}?subject=Navio%20community%20collaboration"><span class="path-icon" aria-hidden="true">+</span><p class="eyebrow">For community</p><h3>Partner or add perspective</h3><p>Schools, professionals, community groups, and businesses can support a program, share career context, or propose a useful collaboration.</p><strong>Start a community conversation</strong></a></div></div></section>
@@ -62,10 +78,142 @@ export const pageContent = {
     ${contactCta("Not sure which involvement route fits?", "Navio involvement question")}`,
   },
 
+  "/sponsor/": {
+    path: "/sponsor/",
+    title: "Sponsor Navio Pathways",
+    description:
+      "Support practical career exploration for Ontario high school students through a sponsorship partnership with Navio Pathways.",
+    noindex: false,
+    html: `
+      ${breadcrumb("Sponsor Navio")}
+      ${internalHero(
+        "Sponsorship",
+        "Put more useful futures within reach.",
+        "A sponsorship with Navio Pathways helps create the programs, conversations, and experiences that give high school students more context for what comes next.",
+        `<div class="button-row">
+          <a class="button button-primary" href="mailto:${email}?subject=Navio%20Pathways%20sponsorship%20conversation">
+            Start a sponsorship conversation <span aria-hidden="true">↗</span>
+          </a>
+          <a class="button button-secondary" href="#tiers">View partnership tiers</a>
+        </div>`,
+        "sponsor",
+      )}
+
+<section class="section sponsor-tiers-section" id="tiers">
+  <div class="container">
+    <div class="section-heading heading-with-note">
+      <div>
+        <p class="eyebrow">Three ways to stand behind the work</p>
+        <h2>Choose the level that fits your organization.</h2>
+      </div>
+      <p>
+        Each package adds more visibility and more ways to connect with Navio NEXT participants. Reach out and we’ll walk you through the details.
+      </p>
+    </div>
+
+    <div class="sponsor-tiers">
+
+      <!-- Silver -->
+      <article class="sponsor-tier sponsor-tier-silver">
+        <div class="sponsor-tier-top">
+          <span class="sponsor-gem" aria-hidden="true"></span>
+          <p class="eyebrow">Visibility</p>
+        </div>
+        <h3>Silver</h3>
+        <p class="sponsor-price">$199</p>
+        <p class="sponsor-tier-lead">
+          For organizations that want to back Navio NEXT and be seen by participants throughout the conference.
+        </p>
+        <p class="sponsor-seats"><strong>1</strong> rep attends</p>
+        <ul>
+          <li>Logo on Navio NEXT’s introduction slides</li>
+          <li>Logo on promotional materials</li>
+          <li>Recognition on Navio Pathways’ Instagram and website</li>
+          <li>Opportunity to provide brochures or promotional material to participants</li>
+          <li>Certificate of appreciation at the end of the conference</li>
+        </ul>
+        <a class="text-link" href="mailto:${email}?subject=Silver%20Package%20sponsorship%20conversation">
+          Discuss Silver <span aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+      <!-- Gold -->
+      <article class="sponsor-tier sponsor-tier-featured sponsor-tier-gold">
+        <div class="sponsor-tier-top">
+          <span class="sponsor-gem" aria-hidden="true"></span>
+          <p class="eyebrow">Visibility + interaction</p>
+        </div>
+        <h3>Gold</h3>
+        <p class="sponsor-price">$399</p>
+        <p class="sponsor-tier-lead">
+          For organizations that want more exposure and the chance to talk with participants about their work and careers.
+        </p>
+        <p class="sponsor-seats">Up to <strong>2</strong> reps</p>
+        <ul>
+          <li>Additional logo placements on conference promotional materials</li>
+          <li>Space for a company-provided banner with your logo, slogan, and contact information</li>
+          <li>Recognition on social media and the website</li>
+          <li>Recognition in the closing speech and introduction slideshow</li>
+          <li>Opportunity to distribute branded merchandise to participants</li>
+          <li>Opportunity to network with students and speak about your organization and careers within it</li>
+        </ul>
+        <a class="text-link" href="mailto:${email}?subject=Gold%20Package%20sponsorship%20conversation">
+          Discuss Gold <span aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+      <!-- Diamond -->
+      <article class="sponsor-tier sponsor-tier-diamond">
+        <div class="sponsor-tier-top">
+          <span class="sponsor-gem" aria-hidden="true"></span>
+          <p class="eyebrow">Maximum contribution</p>
+        </div>
+        <h3>Diamond</h3>
+        <p class="sponsor-price">$499</p>
+        <p class="sponsor-tier-lead">
+          For organizations that want the most impact: significant visibility and direct engagement with participants and attendees.
+        </p>
+        <p class="sponsor-seats">Up to <strong>4</strong> reps</p>
+        <ul>
+          <li>Featured logo placement throughout conference materials</li>
+          <li>Recognition in the opening and closing speeches</li>
+          <li>Dedicated sponsor feature on Navio Pathways’ social media and website</li>
+          <li>Dedicated booth or tent for networking</li>
+          <li>Approved interactive activities or workshops led by your representatives</li>
+          <li>Designated networking session for participants, led by your representatives</li>
+          <li>Featured recognition as a Diamond sponsor</li>
+        </ul>
+        <a class="text-link" href="mailto:${email}?subject=Diamond%20Package%20sponsorship%20conversation">
+          Discuss Diamond <span aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+    </div>
+
+    <p class="sponsor-disclaimer">
+      Sponsorship details, recognition, and participation are discussed directly with Navio Pathways. Navio Pathways is an Ontario incorporated not-for-profit and does not present sponsorships as tax-deductible donations or charitable receipts.
+    </p>
+  </div>
+</section>
+<section class="contact-cta">
+  <div class="contact-cta-orbit" aria-hidden="true"></div>
+  <div class="container contact-cta-grid">
+    <div>
+      <h2>Become a Resource Sponsor</h2><p>Resource sponsors are organizations and companies that provide Navio NEXT with services or goods rather than financial support.</p>
+      <p><strong>Benefits include:</strong> Logo/name recognition in promotional materials, verbal recognition during opening speech, Certificate of appreciation</p>
+    </div>
+    <div class="button-row">
+      <a class="button button-light" href="mailto:${email}?subject=Resource%20Sponsorship%20conversation">Reach Out <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>    `,
+  },
+
   "/resources/": {
     path: "/resources/",
     title: "Career exploration resources for students | Navio Pathways",
-    description: "Use concise Navio Pathways resources to explore careers, prepare for professional conversations, and reflect on practical experience.",
+    description:
+      "Use concise Navio Pathways resources to explore careers, prepare for professional conversations, and reflect on practical experience.",
     noindex: false,
     html: `${breadcrumb("Resources")}${internalHero("Resources", "Small tools for a more informed next step.", "These original guides support career exploration and reflection. Use them independently, with a parent or guardian, or with an educator.", `<div class="button-row"><a class="button button-primary" href="/programs/">Explore programs <span aria-hidden="true">↗</span></a></div>`, "resources")}
     <section class="resource-purpose"><div class="container resource-purpose-grid"><strong>Resources are a supporting part of Navio.</strong><p>They help students prepare and reflect, but they do not replace real experience, guarantee an outcome, or serve as a program application.</p></div></section>
@@ -77,7 +225,8 @@ export const pageContent = {
   "/contact/": {
     path: "/contact/",
     title: "Contact Navio Pathways",
-    description: "Contact Navio Pathways about student programs, organization involvement, schools, community collaboration, accessibility, media, or general questions.",
+    description:
+      "Contact Navio Pathways about student programs, organization involvement, schools, community collaboration, accessibility, media, or general questions.",
     noindex: false,
     html: `${breadcrumb("Contact")}${internalHero("Contact", "Send the question to the right place.", "Choose a route below so the Navio team can understand what you need and respond with relevant information.", "", "contact")}
     <section class="section contact-directory"><div class="container"><div class="contact-primary"><div><p class="eyebrow">Primary organization email</p><h2><a href="mailto:${email}">${email}</a></h2><p>Use email for program details, formal questions, accessibility, safeguarding, partnerships, and anything that needs context.</p></div><span aria-hidden="true">@</span></div><div class="contact-topic-grid"><a href="mailto:${email}?subject=Navio%20program%20question"><p class="eyebrow">Programs</p><h3>Participation and program updates</h3><span>Start email ↗</span></a><a href="mailto:${email}?subject=Navio%20organization%20involvement"><p class="eyebrow">Contributors</p><h3>Organization involvement</h3><span>Start email ↗</span></a><a href="mailto:${email}?subject=Navio%20school%20or%20community%20collaboration"><p class="eyebrow">Community</p><h3>Schools, professionals, and partners</h3><span>Start email ↗</span></a><a href="mailto:${email}?subject=Navio%20Pathways%20organization%20question"><p class="eyebrow">General</p><h3>Organization and media questions</h3><span>Start email ↗</span></a></div></div></section>
@@ -89,7 +238,8 @@ export const pageContent = {
   "/privacy/": {
     path: "/privacy/",
     title: "Privacy policy | Navio Pathways",
-    description: "Read how the Navio Pathways website approaches privacy, direct contact, analytics, youth information, and external services.",
+    description:
+      "Read how the Navio Pathways website approaches privacy, direct contact, analytics, youth information, and external services.",
     noindex: false,
     html: `${breadcrumb("Privacy")}${internalHero("Privacy", "A plain-language approach to website privacy.", "This page describes the public website and direct organization contact.", "", "policy")}
     <section class="section"><div class="container narrow policy-copy"><h2>Information you choose to send</h2><p>This website does not contain inquiry or registration forms. If you email us or use an official social profile, the relevant service processes the information you choose to provide.</p><h2>Analytics</h2><p>Analytics is disabled unless a valid measurement ID is configured after privacy review. We do not intentionally send message content to analytics services.</p><h2>Youth privacy</h2><p>Do not send unnecessary sensitive information about a young person. Any youth program or event registration workflow must clearly explain consent, purpose, access, retention, and safeguarding before information is collected.</p><h2>External services</h2><p>Links to email and Instagram are operated by their respective services and subject to their privacy practices.</p><h2>Contact</h2><p>Privacy questions can be sent to <a href="mailto:${email}?subject=Privacy%20question">${email}</a>.</p></div></section>`,
@@ -98,7 +248,8 @@ export const pageContent = {
   "/terms/": {
     path: "/terms/",
     title: "Website terms | Navio Pathways",
-    description: "Read the terms for using the Navio Pathways website, program and event information, and educational preparation resources.",
+    description:
+      "Read the terms for using the Navio Pathways website, program and event information, and educational preparation resources.",
     noindex: false,
     html: `${breadcrumb("Terms")}${internalHero("Website terms", "Clear expectations for using this site.", "These terms apply to the public Navio Pathways website and its general educational resources.", "", "policy")}
     <section class="section"><div class="container narrow policy-copy"><h2>General information</h2><p>Website content is for general educational and organizational information. It is not professional, academic, legal, financial, medical, or career advice.</p><h2>Program and event information</h2><p>Eligibility, attendance, safety, schedule, venue, speaker, and event requirements are governed by the participant information issued for the relevant program. Website summaries do not replace those materials.</p><h2>No guaranteed outcome</h2><p>A message or expression of interest does not guarantee registration, attendance, a speaker or volunteer role, volunteer hours, employment, admission, or another outcome.</p><h2>Appropriate use</h2><p>Do not misuse the website, interfere with its operation, impersonate another person, or send harmful or unlawful content through linked services.</p><h2>External services</h2><p>Links to email and Instagram are governed by those services. Review their terms and privacy practices before sharing information.</p><h2>Contact</h2><p>Questions can be sent to <a href="mailto:${email}">${email}</a>.</p></div></section>`,
@@ -107,7 +258,8 @@ export const pageContent = {
   "/accessibility/": {
     path: "/accessibility/",
     title: "Accessibility statement | Navio Pathways",
-    description: "Read the Navio Pathways commitment to accessible content, keyboard use, readable design, reduced motion, and feedback.",
+    description:
+      "Read the Navio Pathways commitment to accessible content, keyboard use, readable design, reduced motion, and feedback.",
     noindex: false,
     html: `${breadcrumb("Accessibility")}${internalHero("Accessibility", "Designed for more ways of navigating.", "Navio Pathways aims to make public information clear, readable, and compatible with common assistive technologies.", "", "policy")}
     <section class="section"><div class="container narrow policy-copy"><h2>What we support</h2><ul class="resource-checks"><li>Keyboard navigation and visible focus states</li><li>Semantic headings, landmarks, and descriptive links</li><li>Strong colour contrast and responsive type</li><li>Layouts without horizontal scrolling at narrow widths</li><li>Reduced-motion preferences</li><li>Text alternatives for meaningful images</li></ul><h2>Program and event access</h2><p>For an accessibility question or accommodation conversation, contact us before the relevant activity so the organization can understand the access need and available arrangements.</p><h2>Feedback</h2><p>If something is difficult to access, email <a href="mailto:${email}?subject=Accessibility%20feedback">${email}</a>. Include the page, the problem, and the format or support that would help.</p></div></section>`,
@@ -116,7 +268,8 @@ export const pageContent = {
   "/youth-safety/": {
     path: "/youth-safety/",
     title: "Youth safety approach | Navio Pathways",
-    description: "Read the Navio Pathways youth-safety approach for communication, privacy, boundaries, reporting, and program activities.",
+    description:
+      "Read the Navio Pathways youth-safety approach for communication, privacy, boundaries, reporting, and program activities.",
     noindex: false,
     html: `${breadcrumb("Youth safety")}${internalHero("Youth safety", "Safety needs structure, not assumptions.", "This public summary sets expectations for communication and youth-focused programs, including in-person events.", "", "policy")}
     <section class="section"><div class="container narrow policy-copy"><h2>Core expectations</h2><ul class="resource-checks"><li>Treat every young person with dignity and respect.</li><li>Keep program communication transparent and use approved channels.</li><li>Do not request unnecessary personal information or private contact.</li><li>Use clear supervision, consent, privacy, and reporting procedures.</li><li>Act on concerns and prohibit retaliation for good-faith reports.</li></ul><h2>Program communication</h2><p>Program and event communication, adult involvement, venue access, and supervision must follow the procedures issued for the relevant activity. Adults contributing to youth-facing activity are expected to maintain professional boundaries.</p><h2>Report a concern</h2><p>Email <a href="mailto:${email}?subject=Youth%20safety%20concern">${email}</a> with “Youth safety concern” in the subject line. If someone is in immediate danger, contact local emergency services.</p></div></section>`,
@@ -125,7 +278,8 @@ export const pageContent = {
   "/links/": {
     path: "/links/",
     title: "Navio Pathways links",
-    description: "Open the official Navio Pathways website, programs page, organization email, and social links.",
+    description:
+      "Open the official Navio Pathways website, programs page, organization email, and social links.",
     noindex: true,
     html: `<section><h1>Navio Pathways links</h1><p>Explore Navio programs and connect with Navio Pathways through official channels.</p></section>`,
   },
@@ -141,7 +295,8 @@ export const pageContent = {
   "/exec/volunteer-hours/": {
     path: "/exec/volunteer-hours/",
     title: "Volunteer hour tracking | Navio Pathways",
-    description: "Restricted Navio Pathways volunteer-hour request and approval tool.",
+    description:
+      "Restricted Navio Pathways volunteer-hour request and approval tool.",
     noindex: true,
     html: `<section><h1>Volunteer hour tracking</h1></section>`,
   },
