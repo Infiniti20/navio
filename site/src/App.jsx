@@ -283,6 +283,7 @@ function VolunteerHoursPage() {
 }
 
 export function App({ path = "/" }) {
+  console.log("App path:", path);
   const normalizedPath = normalizePath(path);
   const page = getPage(normalizedPath);
   if (normalizedPath === "/links/") return <LinkPage />;

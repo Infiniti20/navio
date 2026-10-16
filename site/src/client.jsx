@@ -6,6 +6,19 @@ const header = document.querySelector(".site-header");
 const toggle = document.querySelector(".menu-toggle");
 const menu = document.getElementById("mobile-menu");
 
+import React from "react";
+import { createRoot, hydrateRoot } from "react-dom/client";
+import { App } from "./App.jsx";
+
+const container = document.getElementById("root"); // match your actual root id
+const app = <App path={window.location.pathname} />;
+
+if (container.hasChildNodes()) {
+  hydrateRoot(container, app); // production: HTML was pre-rendered
+} else {
+  createRoot(container).render(app); // dev: nothing pre-rendered
+}
+
 let menuTrigger = null;
 const setMenuOpen = (open, restoreFocus = false) => {
   if (!toggle || !menu) return;
